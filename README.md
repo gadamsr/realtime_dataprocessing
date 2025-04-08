@@ -119,8 +119,8 @@ _SELECT COUNT(*) FROM stock_data_streaming.stock_data;_
 
 In a new terminal 
 
-_docker exec -it spark-master spark-submit --packages com.datastax.spark:spark-cassandra-
-connector_2.12:3.5.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 --py-files /dependencies.zip /stream_processor.py_
+_docker exec -it spark-master spark-submit --packages com.datastax.spark:spark-cassandra-connector_2.12:3.5.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 --py-files /dependencies.zip /stream_processor.py_
+
 
  **Airflow UI and Kafka UI**
 
