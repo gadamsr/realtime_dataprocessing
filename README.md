@@ -46,22 +46,23 @@ This project implements an end-to-end real-time data pipeline that:
 
 **1. Clone the Repository**
 
-git clone https://github.com/gadamsr/realtime_dataprocessing.git
+_git clone https://github.com/gadamsr/realtime_dataprocessing.git_
 
-cd realtime_dataprocessing
-2. Set Environment Variables
+_cd realtime_dataprocessing_
 
-echo -e "AIRFLOW_UID=$(id -u)" > .env
+**2. Set Environment Variables**
 
-echo AIRFLOW_UID=50000 >> .env
+_echo -e "AIRFLOW_UID=$(id -u)" > .env_
 
+_echo AIRFLOW_UID=50000 >> .env_
+_
 **3. Initialize Airflow**
 
-docker-compose up airflow-init
+_docker-compose up airflow-init_
 
 **4. Start All Services**
 
-docker-compose up -d
+_docker-compose up -d_
 
 This launches the following services:
 •	Kafka Broker
@@ -76,38 +77,38 @@ This launches the following services:
 
 Copy project files into the Spark master container:
 
-docker cp dependencies.zip spark-master:/dependencies.zip
+_docker cp dependencies.zip spark-master:/dependencies.zip_
 
-docker cp stream_processor.py spark-master:/stream_processor.py
+_docker cp stream_processor.py spark-master:/stream_processor.py_
 
 **6. Access Cassandra**
 
-docker exec -it cassandra cqlsh -u cassandra -p cassandra localhost 9042
+_docker exec -it cassandra cqlsh -u cassandra -p cassandra localhost 9042_
 
 check if topic was created 
 
-DESCRIBE KEYSPACES;
-
+_DESCRIBE KEYSPACES;
+_
 Check if data is being saved in Cassandra
 
-SELECT * FROM stock_data_streaming.stock_data;
+_SELECT * FROM stock_data_streaming.stock_data;_
 
-SELECT COUNT(*) FROM stock_data_streaming.stock_data;
+_SELECT COUNT(*) FROM stock_data_streaming.stock_data;_
 
 **7. Run the Spark Job Using docker exec**
 
 In a new terminal 
 
-docker exec -it spark-master spark-submit --packages com.datastax.spark:spark-cassandra-
-connector_2.12:3.5.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 --py-files /dependencies.zip /stream_processor.py
+_docker exec -it spark-master spark-submit --packages com.datastax.spark:spark-cassandra-
+connector_2.12:3.5.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 --py-files /dependencies.zip /stream_processor.py_
 
 📊 **Airflow UI and Kafka UI**
 
 Once all services are up and running, open the Airflow UI at:
 
-http://localhost:8080
+_http://localhost:8080
 
-http://localhost:8085
+http://localhost:8085_
 
 Login with:
 
@@ -121,8 +122,8 @@ Login with:
 •	The .env file is used to pass the UID to Docker for Airflow compatibility.
 •	stream_processor.py should define your Spark streaming logic.
 •	Kafka topics and DAGs must be created appropriately for the data pipeline to function.
-•	To check if all containers are up and healthy use docker ps -a 
-•	To down the containers use docker-compose down -v 
+•	To check if all containers are up and healthy use _docker ps -a _
+•	To down the containers use _docker-compose down -v_ 
 
 
 
