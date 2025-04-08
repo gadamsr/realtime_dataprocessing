@@ -88,8 +88,8 @@ _docker exec -it cassandra cqlsh -u cassandra -p cassandra localhost 9042_
 
 check if topic was created 
 
-_DESCRIBE KEYSPACES;
-_
+_DESCRIBE KEYSPACES;_
+
 Check if data is being saved in Cassandra
 
 _SELECT * FROM stock_data_streaming.stock_data;_
