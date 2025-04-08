@@ -127,6 +127,7 @@ _docker exec -it spark-master spark-submit --packages com.datastax.spark:spark-c
 Once all services are up and running, open the Airflow UI at:
 
 **http://localhost:8080**
+unpause DAG to run the job. check Kafka UI to see if the topic has been created and data is being generated. Check cassandra to see if the data is being saved. 
 
 **http://localhost:8085**
 
