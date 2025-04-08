@@ -55,7 +55,8 @@ _cd realtime_dataprocessing_
 _echo -e "AIRFLOW_UID=$(id -u)" > .env_
 
 _echo AIRFLOW_UID=50000 >> .env_
-_
+
+
 **3. Initialize Airflow**
 
 _docker-compose up airflow-init_
@@ -106,9 +107,9 @@ connector_2.12:3.5.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 --py-files
 
 Once all services are up and running, open the Airflow UI at:
 
-_http://localhost:8080
+**http://localhost:8080**
 
-http://localhost:8085_
+**http://localhost:8085**
 
 Login with:
 
