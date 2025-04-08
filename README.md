@@ -1,4 +1,5 @@
 **Real-Time Yahoo Finance Data Processing Pipeline**
+
 A scalable pipeline for streaming stock market data using Kafka, Spark, and Cassandra.
 This project demonstrates a real-time data processing pipeline using Apache Airflow, Kafka, Spark, and Cassandra. The pipeline is containerized using Docker and orchestrated via Docker Compose.
 ![architecture](https://github.com/user-attachments/assets/468ba3f9-3a3c-4eae-9025-5526dda74d56)
@@ -13,14 +14,19 @@ This project implements an end-to-end real-time data pipeline that:
 3.	Processes it using Spark Structured Streaming
 4.	Stores analyzed results in Cassandra
    
-🔧 **Technologies Used**
+ **Technologies Used**
 
 •	**Apache Kafka** – Streaming platform
+
 •	**Apache Spark** – Stream processing
+
 •	**Apache Airflow** – Workflow orchestration
+
 •	**Cassandra** – NoSQL database
-•**Docker & Docker Compose** – Containerization
-•**PostgreSQL** – Metadata DB for Airflow
+
+•  **Docker & Docker Compose** – Containerization
+
+•  **PostgreSQL** – Metadata DB for Airflow
  
 **Project Structure**
 .
@@ -44,7 +50,7 @@ This project implements an end-to-end real-time data pipeline that:
 
 ├── stream_processor.py        # Spark stream processor
 
-** Setup Instructions**
+**Setup Instructions**
 
 **1. Clone the Repository**
 
@@ -69,11 +75,17 @@ _docker-compose up -d_
 
 This launches the following services:
 •	Kafka Broker
+
 •	Zookeeper
+
 •	Cassandra
+
 •	Spark Master & Worker
+
 •	Airflow Webserver, Scheduler, Triggerer
+
 •	Kafka UI
+
 •	PostgreSQL (for Airflow metadata)
 
 **5. Upload Project Files to Spark**
@@ -115,17 +127,22 @@ Once all services are up and running, open the Airflow UI at:
 
 Login with:
 
-•**Username:** admin
+**Username:** admin
 
-•**Password:** admin
+**Password:** admin
 
 **Notes**
 
 •	Make sure Docker is properly installed and running.
+
 •	The .env file is used to pass the UID to Docker for Airflow compatibility.
+
 •	stream_processor.py should define your Spark streaming logic.
+
 •	Kafka topics and DAGs must be created appropriately for the data pipeline to function.
+
 •	To check if all containers are up and healthy use _docker ps -a _
+
 •	To down the containers use _docker-compose down -v_ 
 
 
