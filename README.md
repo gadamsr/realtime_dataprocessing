@@ -1,6 +1,8 @@
 **Real-Time Yahoo Finance Data Processing Pipeline**
 A scalable pipeline for streaming stock market data using Kafka, Spark, and Cassandra.
 This project demonstrates a real-time data processing pipeline using Apache Airflow, Kafka, Spark, and Cassandra. The pipeline is containerized using Docker and orchestrated via Docker Compose.
+![architecture](https://github.com/user-attachments/assets/468ba3f9-3a3c-4eae-9025-5526dda74d56)
+
 
 🔗**Repository:** https://github.com/gadamsr/realtime_dataprocessing
 
