@@ -32,6 +32,7 @@ This project implements an end-to-end real-time data pipeline that:
 ├── dependencies.zip           # Spark dependencies
 ├── requirements.txt           # Python dependencies
 ├── stream_processor.py        # Spark stream processor
+
 **🚀 Setup Instructions**
 
 **1. Clone the Repository**
@@ -76,8 +77,11 @@ docker exec -it spark-master spark-submit --packages com.datastax.spark:spark-ca
 Once all services are up and running, open the Airflow UI at:
 http://localhost:8080
 http://localhost:8085
+
 Login with:
+
 •**Username:** admin
+
 •**Password:** admin
 
 📌**Notes**
