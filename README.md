@@ -64,7 +64,12 @@ _echo -e "AIRFLOW_UID=$(id -u)" > .env_
 
 _echo AIRFLOW_UID=50000 >> .env_
 
+_cd scripts_
 
+_chmod +x scripts/entrypoint.sh_
+
+_ cd .._
+ 
 **3. Initialize Airflow**
 
 _docker-compose up airflow-init_
