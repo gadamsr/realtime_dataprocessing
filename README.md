@@ -6,7 +6,7 @@ This project demonstrates a real-time data processing pipeline using Apache Airf
 
 🔗**Repository:** https://github.com/gadamsr/realtime_dataprocessing
 
-📌**Overview**
+**Overview**
 This project implements an end-to-end real-time data pipeline that:
 1.	Fetches live stock data from Yahoo Finance API
 2.	Streams it through Apache Kafka
@@ -44,7 +44,7 @@ This project implements an end-to-end real-time data pipeline that:
 
 ├── stream_processor.py        # Spark stream processor
 
-**🚀 Setup Instructions**
+** Setup Instructions**
 
 **1. Clone the Repository**
 
@@ -105,7 +105,7 @@ In a new terminal
 _docker exec -it spark-master spark-submit --packages com.datastax.spark:spark-cassandra-
 connector_2.12:3.5.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 --py-files /dependencies.zip /stream_processor.py_
 
-📊 **Airflow UI and Kafka UI**
+ **Airflow UI and Kafka UI**
 
 Once all services are up and running, open the Airflow UI at:
 
@@ -119,7 +119,7 @@ Login with:
 
 •**Password:** admin
 
-📌**Notes**
+**Notes**
 
 •	Make sure Docker is properly installed and running.
 •	The .env file is used to pass the UID to Docker for Airflow compatibility.
